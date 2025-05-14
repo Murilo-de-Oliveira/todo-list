@@ -1,7 +1,10 @@
 from fastapi import FastAPI
+from app.routes import tasks
 
-app = FastAPI()
+app = FastAPI(title="ToDo List API")
+
+app.include_router(tasks.router, prefix="/tasks", tags=["Tarefas"])
 
 @app.get("/")
-def home():
-    return {"mensagem": "API da ToDo List funcionando!"}
+def read_root():
+    return {"mensagem": "API de ToDo está rodando!"}
