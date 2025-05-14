@@ -1,0 +1,11 @@
+name: todo-list-venv
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - fastapi
+      - uvicorn[standard]
+      - pydantic>=2.0
+prefix: C:\Users\thepl\miniconda3\envs\todo-list-venv
